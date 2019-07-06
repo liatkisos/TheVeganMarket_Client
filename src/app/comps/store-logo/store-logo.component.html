@@ -1,0 +1,16 @@
+<div class="row app-store-logo">
+
+  <div class="col">
+
+      <a id="logoText" [routerLink]="'/'">The Vegan Market<img class="logo" src="https://svgsilh.com/svg/728408-4caf50.svg" /></a> 
+      
+      
+  </div>
+
+  <div class="col">
+
+    <div class="clientName"> Hi, {{clientfirstName}}<div *ngIf="isAdmin" class="admin-msg">Administrator Account</div> <div><button class="btn btn-dark btn-sm" *ngIf="isConnected" (click)="logout()">Logout</button></div></div>
+    
+  </div>
+
+</div>

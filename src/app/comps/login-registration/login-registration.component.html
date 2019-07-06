@@ -1,0 +1,104 @@
+<div class="row row-app-login-registration">
+
+  <div class="col">
+
+    <div class="row">
+
+      <div class="col">
+
+        <img src="https://www.supermarketnews.com/sites/supermarketnews.com/files/styles/article_featured_standard/public/Online_grocery_shopping_tablet_1.png?itok=V0yjse1O" />
+
+      </div>
+
+    </div>
+
+    <div *ngIf="isConnected" class="row">
+
+      <div class="col">
+
+        <button class="login-btn btn btn-success" (click)="goToMarket()">{{btnText}}</button>
+
+        <div class="login-msg" *ngIf="isConnected">Welcome to The Vegan Market!</div>
+
+        <div class="login-msg" *ngIf="isConnected">Wishing you the best shopping experience.</div>
+
+      </div>
+
+    </div>
+
+    <div *ngIf="isDisconnected" class="row">
+
+      <div class="col">
+
+        <h6>Please sign in.</h6>
+
+      </div>
+
+    </div>
+
+    <div *ngIf="isDisconnected" class="row">
+
+      <div class="col-3">
+
+        <span>Email:</span> 
+
+      </div>
+
+      <div class="col">
+
+        <input [(ngModel)]="username" />
+
+      </div>
+
+    </div>
+
+    <div *ngIf="isDisconnected" class="row">
+
+      <div class="col-3">
+
+       <span>Password:</span> 
+
+      </div>
+
+      <div class="col">
+
+        <input type="password" [(ngModel)]="password" maxlength="8" />
+
+      </div>
+
+    </div>
+
+    <div *ngIf="isDisconnected" class="row">
+
+      <div class="col">
+
+        <button *ngIf="btnNotLoad" class="btn btn-success" (click)="login()">Login</button>
+
+        <button *ngIf="!btnNotLoad" class="btn btn-success" type="button">
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          Login
+        </button>
+
+      </div>
+
+    </div>
+
+    <div *ngIf="isDisconnected" class="row">
+
+      <div class="col msg">{{msg}}</div>
+
+    </div>
+
+    <div *ngIf="isDisconnected" class="row">
+
+      <div class="col">
+
+        <a [routerLink]="'/register'">No account yet? Sign up here</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

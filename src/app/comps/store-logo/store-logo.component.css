@@ -1,0 +1,37 @@
+h3 {
+    color:#28a745;
+}
+
+.logo {
+    width: 60px  !important ;
+}
+
+#logoText {
+
+    font-size:2em;
+    color:#28a745;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#logoText:hover {
+    font-size:2em;
+    color:#28a74682;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    
+}
+
+
+/* .clientName{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:20px;
+    text-decoration: bold;
+} */
+
+div.clientName {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:20px;
+    text-decoration: bold;
+    text-align-last: right;
+    padding-right:110px;
+}

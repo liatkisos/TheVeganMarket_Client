@@ -1,0 +1,53 @@
+<div class="row row-app-store-information">
+
+  <div class="col">
+
+    <div class="row">
+
+      <div class="col">
+
+        <img src="https://images.pexels.com/photos/1327211/pexels-photo-1327211.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col">
+
+        Total orders on site: {{totalOrders}}
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col">
+
+        Total products on site: {{totalProducts}}
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col notification">
+
+        <div *ngIf="isConnectedFirstTime">Welcome! Make sure to check out our new products.</div>
+        <div *ngIf="isConnected">Your last purchase was made on {{lastPurchaseDate}}.</div>
+        <div *ngIf="isConnectedWithOpenCart">
+          <div class="cart-msg">You have an open cart from: {{CartDate}}.</div>
+          <div class="cart-msg">Total Price: ${{totalPrice}}</div>
+          <div class="cart-msg">Continue shopping.</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
